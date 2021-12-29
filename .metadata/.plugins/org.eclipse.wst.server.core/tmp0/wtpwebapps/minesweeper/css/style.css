@@ -1,0 +1,118 @@
+@charset "utf-8";
+table,
+tr,
+td {
+	text-align: center;
+	border: 1px solid rgb(143, 145, 250);
+	font-weight: bold;
+	margin-left:auto; 
+    margin-right:auto;
+    border-spacing: 0px;
+}
+
+td{
+	border: 1px solid rgb(143, 145, 250);
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	border-spacing: 0px;	
+}
+.styled {
+    display:inline;
+    border: 1px solid rgb(107, 106, 106);
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color:  transparent;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 5px;
+}
+.styled:hover {
+    background-color: rgb(143, 145, 250);
+    border: 1px solid rgb(0, 0, 92);
+}
+.menu-box{
+    border: 1px solid rgb(107, 106, 106); 
+    width: 20%;
+    height: 150%;
+    display:inline-block;
+    text-align:center;
+    border-radius: 5px;
+}
+.menu-box:hover{
+    border: 1px solid rgb(0, 0, 92);
+    background-color: rgb(143, 145, 250);
+}
+.menu-box2{
+    border: 1px solid rgb(107, 106, 106); 
+    width: 40%;
+    height: 50%;
+    display:inline-block;
+    text-align:center;
+    border-radius: 5px;
+}
+.menu-box2:hover{
+    border: 1px solid rgb(0, 0, 92);
+    background-color: rgb(143, 145, 250);
+}
+.menu-box-anchor{
+    color: white;
+    height: 150px;
+	text-decoration: none;
+	display: block;
+}
+.menu-box-anchor:hover{
+    color: rgb(0, 0, 92);
+}
+.title-return{
+	color: white;
+	text-decoration: none;
+	float: left; 
+}
+.title-return:hover{
+	color: rgb(143, 145, 250);
+}
+.id_pw{
+	margin: 5px;
+	width: 300px;
+	height: 50px;
+	font-size: 20px;
+}
+.id_pw:focus{
+	outline: 5px solid rgb(143, 145, 250);
+}
+.id_pw_submit{
+	margin: 10px;
+	width: 308px;
+	height: 56px;
+	font-size: 20px;
+	background-color: rgb(143, 145, 250);
+}
+.id_pw_submit:hover{
+	outline: 5px solid rgb(143, 145, 250);
+	
+}
+.col-sm-3{
+	display:inline-block;
+	margin: 10px;
+}
+.col-sm-2{
+	display:inline-block;
+	color: aqua;
+	font-size: x-large;
+}
+.col-sm-10{
+	display:inline-block;
+	margin: 10px;
+	color: aqua;
+	font-size: x-large;
+}
+.form-control{
+	font-size: x-large;
+}
+.alert-danger{
+	font-size: x-large;
+	color: yellow;
+}

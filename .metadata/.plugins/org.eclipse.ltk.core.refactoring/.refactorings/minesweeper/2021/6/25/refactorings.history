@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;minesweeper/src/main/webapp/boardDetail.jsp&apos; to &apos;boardAdd.jsp&apos;" description="Rename resource &apos;boardDetail.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/boardDetail.jsp" name="boardAdd.jsp" stamp="1624071701051" updateReferences="true"/>
+</session>

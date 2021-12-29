@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="UserMapper">
+	<insert id="addUser" parameterType="com.bean3oup.model.User">
+		INSERT INTO `minesweeper`.`user` (`ID`, `PW`, `NICKNAME`, `MAIL`)
+		VALUES (#{id}, #{pw}, #{nickname}, #{mail});
+	</insert>
+	
+	<select id="loginUser" parameterType="com.bean3oup.model.User" resultType="com.bean3oup.model.User">
+		SELECT `ID`, `NICKNAME`, `MAIL`
+		FROM `user`
+		WHERE `ID` = #{id} AND `PW` = #{pw}
+	</select>
+	
+	<update id="updateUser" parameterType="com.bean3oup.model.User">
+		UPDATE `user` SET 
+		`PW` = #{pw}, 
+		`NICKNAME` = #{nickname},
+		`MAIL` = #{mail}
+		 WHERE (`ID` = #{id});
+	</update>
+	
+	<delete id="deleteUser">
+		DELETE FROM `user`
+		WHERE ID = #{id}
+	</delete>
+	
+	<select id="getAllUsers" resultType="com.bean3oup.model.User">
+		SELECT * FROM `user`
+	</select>
+	
+	<insert id="addRank" parameterType="com.bean3oup.model.SaveRank">
+		INSERT INTO `minesweeper`.`rank` (`ID`, `NICKNAME`, `TIME`, `LEVEL`)
+		VALUES (#{id}, #{nickname}, #{time}, #{level});
+	</insert>
+	
+	<select id="getLevel1Ranks" resultType="com.bean3oup.model.SaveRank">
+		SELECT `ID`, `NICKNAME`, `TIME` 
+		FROM `rank` 
+		WHERE `LEVEL` = 1 
+		ORDER BY `TIME`
+	</select>
+	<select id="getLevel2Ranks" resultType="com.bean3oup.model.SaveRank">
+		SELECT `ID`, `NICKNAME`, `TIME` 
+		FROM `rank` 
+		WHERE `LEVEL` = 2 
+		ORDER BY `TIME`
+	</select>
+	<select id="getLevel3Ranks" resultType="com.bean3oup.model.SaveRank">
+		SELECT `ID`, `NICKNAME`, `TIME` 
+		FROM `rank` 
+		WHERE `LEVEL` = 3 
+		ORDER BY `TIME`
+	</select>
+	
+	<insert id="addBoard" parameterType="com.bean3oup.model.Board">
+		INSERT INTO `minesweeper`.`board` (`TITLE`, `ID`, `DATE`, `CONTENT`)
+		VALUES (#{title}, #{id}, #{date}, #{content});
+	</insert>
+	<select id="getBoardList" resultType="com.bean3oup.model.Board">
+		SELECT `IDX`, `TITLE`, `ID`, `DATE` 
+		FROM `board`
+	</select>
+	
+	<select id="boardDetail" parameterType="com.bean3oup.model.Board" resultType="com.bean3oup.model.Board">
+		SELECT `IDX`, `TITLE`, `ID`, `DATE`, `CONTENT`
+		FROM `board`
+		WHERE `IDX` = #{idx}
+	</select>
+	
+	<update id="updateBoard" parameterType="com.bean3oup.model.Board">
+		UPDATE `board` SET 
+		`TITLE` = #{title}, 
+		`CONTENT` = #{content}
+		 WHERE (`IDX` = #{idx});
+	</update>
+	
+	<delete id="deleteBoard">
+		DELETE FROM `board`
+		WHERE IDX = #{idx}
+	</delete>
+</mapper>
